@@ -1,0 +1,656 @@
+
+#Effects by Hyasabaru
+
+#======== Effects Code ========#
+
+[effect_blood]
+attachedToUnit: false
+priority: high
+physics:true
+physicsGravity:2.5
+atmospheric:true
+image: ROOT:Common/Blood001.png
+life: 500
+hSpeed:1.4
+scaleTo:0.9
+scaleFrom:0.55
+dirOffset:0.8
+dirOffsetRandom:1
+dirSpeed:2
+xSpeedRelativeRandom: 0.4
+ySpeedRelativeRandom: 0.4
+drawUnderUnits:false
+
+[effect_bloodshed]
+@copyFromSection: effect_blood
+physicsGravity:1
+image: ROOT:Common/Blood002.png
+scaleTo:0.9
+scaleFrom:0.7
+dirOffsetRandom:2
+xSpeedRelativeRandom: 1
+ySpeedRelativeRandom: 1
+attachedToUnit: false
+drawUnderUnits:true
+
+[effect_gore]
+priority: high
+spawnChance: 0.75
+attachedToUnit: false
+life: 500
+physics: true
+scaleFrom:0.9
+scaleTo: 0.7
+xSpeedRelativeRandom: 1
+ySpeedRelativeRandom: 1
+ySpeedRelative: -1
+hSpeed: 1.4
+dirSpeedRandom:6
+image: ROOT:Common/Gore001.png
+drawUnderUnits:false
+dirOffsetRandom:360
+
+#===== Gold Chip =====#
+
+[effect_buildGold]
+scaleFrom: 0
+scaleTo: 0
+alsoEmitEffects:CUSTOM:goldChip*3
+
+[effect_buildRed]
+scaleFrom: 0
+scaleTo: 0
+alsoEmitEffects:CUSTOM:goldChipRed*3
+color: red
+
+[effect_goldChip]
+attachedToUnit: false
+life: 150
+alpha: 1.25
+scaleFrom:0.25
+scaleTo:0.25
+xSpeedRelative: 0.1
+xSpeedRelativeRandom: 0.2
+ySpeedRelative: 1
+ySpeedRelativeRandom: 0.5
+image: ROOT:Common/GoldChip1.png
+priority: low
+drawUnderUnits:false
+atmospheric:true
+dirOffsetRandom:12
+
+[effect_goldChipRed]
+attachedToUnit: false
+life: 150
+alpha: 1.25
+scaleFrom:0.25
+scaleTo:0.25
+xSpeedRelative: 0.1
+xSpeedRelativeRandom: 0.2
+ySpeedRelative: 1
+ySpeedRelativeRandom: 0.5
+image: ROOT:Common/GoldChipRed.png
+priority: low
+drawUnderUnits:false
+atmospheric:true
+dirOffsetRandom:12
+
+
+
+
+
+[effect_rustChip]
+attachedToUnit: false
+life: 150
+alpha: 1.5
+scaleFrom:0.25
+scaleTo:0.25
+xSpeedRelative: 0.1
+xSpeedRelativeRandom: 0.2
+ySpeedRelative: 1
+ySpeedRelativeRandom: 0.5
+image: ROOT:Common/RustChip1.png
+priority: low
+drawUnderUnits:false
+atmospheric:true
+dirOffsetRandom:12
+
+[effect_sparks]
+attachedToUnit: false
+life: 150
+scaleFrom:0.7
+scaleTo: 0.5
+physics: true
+xSpeedRelativeRandom: 0.6
+ySpeedRelativeRandom: 0.6
+hSpeed: 1
+image: ROOT:Common/Spark.png
+dirOffsetRandom:12
+priority: low
+
+[effect_sparksRed]
+attachedToUnit: false
+life: 160
+scaleFrom:0.9
+scaleTo: 0.7
+physics: true
+xSpeedRelativeRandom: 0.9
+ySpeedRelativeRandom: 0.9
+hSpeed: 1
+color:red
+image: ROOT:Common/Spark.png
+dirOffsetRandom:12
+priority: low
+
+[effect_sparks2]
+attachedToUnit: false
+life: 150
+scaleFrom:0.7
+scaleTo: 0.5
+physics: true
+xSpeedRelativeRandom: 1.5
+ySpeedRelativeRandom: 1.5
+hSpeed: 1
+image: ROOT:Common/Spark.png
+dirOffsetRandom:12
+priority: low
+#===== Sparks effect ======#
+[effect_SparksRed1]
+life: 180
+priority: low
+physicsGravity: 10
+physics: true
+image: ROOT:common/sparks red.png
+xOffsetRelativeRandom:  5
+yOffsetRelativeRandom:-11
+
+ySpeedRelativeRandom: -6
+hOffsetRandom: -4
+hSpeed: 6
+scaleTo: 2.5
+scaleFrom: 2.5
+fadeOut: true 
+alsoEmitEffects:CUSTOM:SparksRed2,CUSTOM:SparksRed3,CUSTOM:SparksRed4
+[effect_SparksRed2]
+lifeRandom: -180
+priority: low
+physicsGravity: 13
+physics: true
+image: ROOT:common/sparks red.png
+xOffsetRelativeRandom:  -5
+yOffsetRelativeRandom: 11
+fadeOut: true 
+ySpeedRelativeRandom:  6
+hOffsetRandom:  4
+hSpeed: 6
+scaleTo: 2.5
+scaleFrom: 2.5
+
+[effect_SparksRed3]
+lifeRandom: -180
+priority: low
+physicsGravity: 13
+physics: true
+image: ROOT:common/sparks red.png
+xOffsetRelativeRandom:  -5
+yOffsetRelativeRandom: 11
+fadeOut: true 
+ySpeedRelativeRandom:  6
+hOffsetRandom:  4
+hSpeed: 6
+scaleTo: 2.5
+scaleFrom: 2.5
+
+[effect_SparksRed4]
+lifeRandom: -180
+priority: low
+physicsGravity: 13
+physics: true
+image: ROOT:common/sparks red.png
+xOffsetRelativeRandom:  -5
+yOffsetRelativeRandom: 11
+fadeOut: true 
+ySpeedRelativeRandom:  6
+hOffsetRandom:  4
+hSpeed: 6
+scaleTo: 2.5
+scaleFrom: 2.5
+
+
+
+#===== End of Effect =====#
+
+[effect_levTrail]
+life: 70
+priority:verylow
+image: ROOT:Common/LevTrail.png
+attachedToUnit: false
+xOffsetRelative:0
+yOffsetRelative:-11
+drawUnderUnits: false
+alpha:0.25
+fadeOut: true
+scaleFrom: 1
+scaleTo: 0.6
+atmospheric: true
+teamColorRatio:0.8
+
+[effect_burstTrail]
+life: 80
+priority:verylow
+image: ROOT:Common/LevTrail.png
+attachedToUnit: false
+xOffsetRelative:0
+yOffsetRelative:-11
+drawUnderUnits: false
+alpha:0.25
+color: red
+fadeOut: true
+scaleFrom: 1
+scaleTo: 0.6
+atmospheric: true
+
+[effect_smokeTrail]
+createWhenZoomedOut: false
+priority:veryhigh
+attachedToUnit:false
+image:ROOT:\Common\smoke.png
+life: 50
+yOffsetRelativeRandom:1
+yOffsetRelative:-3
+xOffsetRelative:0
+scaleFrom: 0.4
+scaleTo: 0
+alpha: 1
+dirOffsetRandom:360
+dirSpeedRandom:3
+#====================#
+#Rocket effects
+[effect_projectileSmoke]
+life: 50
+lifeRandom: 10
+attachedToUnit: false
+image: ROOT:common/smoke.png
+scaleFrom: 0.8
+scaleTo: 0.6
+alpha: 0.6
+ySpeedRelativeRandom: 0.1
+xSpeedRelativeRandom: 0.1
+dirSpeedRandom: 0.2
+imageShadow: SHADOW:ROOT:common/smoke.png
+shadow: true
+
+[effect_missileFlare1]
+life: 10
+lifeRandom: 5
+spawnChance: 0.25
+alwayStartDirAtZero: true
+ifSpawnFailsEmitEffects: CUSTOM:missileFlare2
+image: ROOT:common/yellow_flare.png
+yOffsetRelative: -3.5
+@define missileFlareSize: 0.1
+scaleFrom: ${missileFlareSize}
+scaleTo: ${missileFlareSize}
+
+
+[effect_missileFlare2]
+ifSpawnFailsEmitEffects: CUSTOM:missileFlare3
+@copyFromSection: effect_missileFlare1
+@define missileFlareSize: 0.15
+
+[effect_missileFlare3]
+ifSpawnFailsEmitEffects: CUSTOM:missileFlare4
+@copyFromSection: effect_missileFlare1
+@define missileFlareSize: 0.2
+
+[effect_missileFlare4]
+@copyFromSection: effect_missileFlare1
+@define missileFlareSize: 0.25
+
+
+#blue
+
+[effect_missileFlare1B]
+life: 10
+lifeRandom: 5
+spawnChance: 0.25
+alwayStartDirAtZero: true
+ifSpawnFailsEmitEffects: CUSTOM:missileFlare2B
+image: ROOT:common/blue flare.png
+yOffsetRelative: -3.5
+@define missileFlareSize: 0.1
+scaleFrom: ${missileFlareSize}
+scaleTo: ${missileFlareSize}
+
+
+[effect_missileFlare2B]
+ifSpawnFailsEmitEffects: CUSTOM:missileFlare3B
+@copyFromSection: effect_missileFlare1B
+@define missileFlareSize: 0.15
+
+[effect_missileFlare3B]
+ifSpawnFailsEmitEffects: CUSTOM:missileFlare4B
+@copyFromSection: effect_missileFlare1B
+@define missileFlareSize: 0.2
+
+[effect_missileFlare4B]
+@copyFromSection: effect_missileFlare1B
+@define missileFlareSize: 0.25
+
+
+
+
+
+[effect_rocketTrail]
+life: 35
+priority:veryhigh
+#delayedStartTimer: 0.2
+#alsoEmitEffectsOnDeath: CUSTOM:rocketTrail
+image: ROOT:Common/RocketTrailOSAC.png
+xOffsetRelative:0
+xOffsetAbsolute: 0
+yOffsetRelativeRandom:1
+yOffsetRelative:-21
+hSpeed: 0.1
+drawUnderUnits: true
+attachedToUnit: false
+alpha:0.45
+fadeOut: true
+scaleFrom: 0.65
+scaleTo: 0.025
+atmospheric: true
+
+
+[effect_rocketTrail2]
+life: 35
+priority:veryhigh
+#delayedStartTimer: 0.2
+#alsoEmitEffectsOnDeath: CUSTOM:rocketTrail
+image: ROOT:Common/smoke.png
+xOffsetRelative:0
+xOffsetAbsolute: 0
+yOffsetRelativeRandom:1
+yOffsetRelative:-21
+hSpeed: 0.1
+drawUnderUnits: true
+attachedToUnit: false
+alpha:0.45
+fadeOut: true
+scaleFrom: 0.65
+scaleTo: 0.025
+atmospheric: true
+
+
+
+
+#========== Muzzle List ==========#
+
+[effect_hugeMuzzle]
+life: 300
+xOffsetRelative:0
+yOffsetRelative:0
+image: ROOT:Common/MuzzleFlashBig.png
+attachedToUnit: true
+alpha:1
+animateFrameStart:0
+animateFrameEnd:28
+animateFrameSpeed:0.4
+frame_width: 10
+frame_height: 35
+scaleFrom: 0.55
+scaleTo: 0.6
+
+[effect_testMuzzle]
+life: 300
+xOffsetRelative:0
+yOffsetRelative:2
+image: ROOT:Common/MuzzleFlashTest.png
+attachedToUnit: true
+alpha:1
+animateFrameStart:0
+animateFrameEnd:4
+animateFrameSpeed:0.12
+frame_width: 10
+frame_height: 28
+scaleFrom: 0.45
+scaleTo: 0.5
+
+[effect_smallMuzzle1]
+#Sprite by Synchronized Dude
+life: 300
+xOffsetRelative:0
+yOffsetRelative:2
+image: ROOT:Common/MuzzleFlashSmall1.png
+attachedToUnit: true
+alpha:1
+animateFrameStart:0
+animateFrameEnd:2
+animateFrameSpeed:0.12
+frame_width: 12
+frame_height: 9
+scaleFrom: 0.35
+scaleTo: 0.4
+
+[effect_blinkMuzzle1]
+life: 100
+image: ROOT:Common/blinkFlame.png
+attachedToUnit: true
+alpha:1
+animateFrameStart:0
+animateFrameEnd:2
+animateFrameSpeed:0.12
+frame_width: 5
+frame_height: 12
+
+[effect_blinkMuzzle2]
+life: 120
+priority: veryhigh
+image: ROOT:Common/blinkFlame2.png
+attachedToUnit: true
+alpha:1
+fadeOut: true
+scaleFrom: 1
+scaleTo: 0.1
+
+[effect_blinkParticle]
+life: 60
+priority: high
+alpha: 1.25
+image: ROOT:Common/blinkParticle.png
+xSpeedRelativeRandom: 1.25
+ySpeedRelativeRandom: 1.25
+scaleFrom: 1
+scaleTo: 0.1
+[effect_dualMuzzle1]
+life: 80
+image: ROOT:Common/MuzzleFlashDual.png
+attachedToUnit: true
+alpha:1
+animateFrameStart:0
+animateFrameEnd:2
+animateFrameSpeed:0.12
+frame_width: 10
+frame_height: 9
+
+[effect_battleshipMuzzle]
+life: 100
+xOffsetRelative:0
+yOffsetRelative:2
+image: ROOT:Common/MuzzleFlashBS1.png
+attachedToUnit: true
+alpha:2
+animateFrameStart:0
+animateFrameEnd:2
+animateFrameSpeed:0.09
+frame_width: 8
+frame_height: 12
+
+#========== End of Muzzle List ==========#
+
+[effect_fire1]
+alwayStartDirAtZero:true
+#attachedToUnit: true
+hSpeed: 0
+life: 300
+alpha: 2
+image:ROOT:Common/Burning1.png
+priority: veryhigh
+drawUnderUnits:false
+xOffsetRelativeRandom: 12
+#yOffsetRelativeRandom: 8
+yOffsetRelative: 3
+animateFrameStart:0
+animateFrameEnd:9
+animateFrameSpeed:0.16
+frame_width: 16
+frame_height: 32
+
+[effect_fire2]
+@copyFromSection: effect_fire1
+xOffsetRelativeRandom: 16
+
+[effect_fire3]
+@copyFromSection: effect_fire1
+xOffsetRelativeRandom: 24
+
+[effect_emptyShell]
+priority: verylow
+image:ROOT:Common/EmptyShellOSAC.png
+imageShadow: SHADOW:ROOT:Common/EmptyShellOSAC.png
+life: 60
+delayedStartTimer: 10
+fadeOut: true
+attachedToUnit: false
+color: #a8a8a8
+scaleFrom: 0.6
+scaleTo: 0.6
+alpha: 2
+fadeInTime: 3
+drawUnderUnits:false
+liveAfterAttachedDies: false
+physics: true
+physicsGravity: 2
+createWhenZoomedOut: false
+xSpeedRelative: 1.4
+xSpeedRelativeRandom: 0.6
+ySpeedRelativeRandom: 0.5
+hSpeed: 2
+dirSpeedRandom: 1
+
+#Change this to adjust position
+yOffsetRelative:-24
+xOffsetRelative:3.25
+
+[effect_smokeGround]
+priority:veryhigh
+stripIndex: effects
+frameIndex: 0
+createWhenOverLiquid: false
+life: 120
+fadeOut: true
+attachedToUnit: false
+color: #6D5448
+fadeInTime:5.25
+scaleFrom: 1
+scaleTo: 3.5
+alpha: 1
+drawUnderUnits:false
+hSpeed:0.4
+hOffsetRandom:0.15
+atmospheric:true
+dirOffsetRandom:180
+shadow:true
+xOffsetRelativeRandom: 18
+yOffsetRelativeRandom: 18
+xSpeedAbsoluteRandom:0.3
+ySpeedAbsoluteRandom:0.3
+atmospheric: true
+
+[effect_smoke]
+frameIndex: 0
+stripIndex: smoke_black
+spawnChance: 0.7
+life: 90
+fadeOut: true
+attachedToUnit: false
+color: #FFFFFF
+fadeInTime:15
+scaleFrom: 0.2
+scaleTo: 0.4
+alpha: 1
+drawUnderUnits:false
+liveAfterAttachedDies: false
+hSpeed:0.2
+dirOffsetRandom:180
+atmospheric: true
+
+[effect_treadMark1]
+xOffsetRelative: 5
+yOffsetRelative: -9
+createWhenOffscreen: false
+createWhenZoomedOut: false
+life: 80
+priority: critical
+hSpeed: 0
+alpha: 0.625
+image: ROOT:Common/TreadMarkOSAC.png
+scaleFrom: 1
+scaleTo: 1
+attachedToUnit: false
+drawUnderUnits: true
+
+[effect_treadMark2]
+@copyFromSection: effect_treadMark1
+yOffsetRelative: -9
+xOffsetRelative: -5
+[effect_treadMark3]
+@copyFromSection: effect_treadMark1
+yOffsetRelative: 10
+xOffsetRelative: 5
+[effect_treadMark4]
+@copyFromSection: effect_treadMark1
+yOffsetRelative: 10
+xOffsetRelative: -5
+
+[effect_bulletHit]
+priority: high
+life: 20
+scaleFrom: 0.65
+scaleTo: 0.75
+image:ROOT:Common/BulletHit001.png
+total_frames: 4
+animateFrameStart: 0
+animateFrameEnd: 3
+animateFrameSpeed: 0.75
+
+[effect_smoke1]
+attachedToUnit: false
+life: 300
+alpha: 0.5
+scaleFrom:0.1
+scaleTo: 2
+#physics: true
+xSpeedRelativeRandom: 0.07
+ySpeedRelativeRandom: 0.07
+hSpeed: 0.1
+image: ROOT:Common/smoke.png
+priority:high
+drawUnderUnits:false
+atmospheric:true
+
+[effect_graySmoke]
+createWhenOffscreen: false
+createWhenZoomedOut: false
+attachedToUnit: false
+life: 1800
+alpha: 1
+color: #818181
+scaleFrom: 5
+scaleTo: 10
+fadeInTime: 500
+fadeOut: true
+hSpeed: 0.02
+stripIndex: effects
+frameIndex: 0
+priority: critical
+drawUnderUnits: false

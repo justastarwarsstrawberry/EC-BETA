@@ -1,0 +1,16 @@
+[core]
+strictLevel: 1
+
+[global_resource_Temperature]
+displayName: Temperature
+hidden: true
+displayNameShort: Temp
+displayColor: #ec1c24
+
+[global_resource_ResearchBase]
+displayName: Research_Slot
+hidden: true
+displayNameShort: Research
+displayColor: #ec1c24
+
+

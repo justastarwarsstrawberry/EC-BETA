@@ -1,0 +1,161 @@
+[core]
+copyFrom: ROOT:Effects.template, ROOT:mutator-data.template
+name: anjngja
+displayText: Valko
+displayDescription: The Valko is a first generation Chaos Spaceship capable of supporting a raiding party. \n - Hard to defeat \n - Very Expensive
+mass: 10000
+
+radius: 46
+tags: aircraft, Armor, heavy
+
+displayRadius: 46
+price: 10000
+
+maxHp: 4000
+
+techLevel: 3
+buildSpeed: 48.5s
+
+maxShield: 500
+
+energyMax: 10
+energyRegen: 0.8
+startShieldAtZero: true
+
+shieldRegen: 0.03
+
+armour: 16
+
+fogOfWarSightRange: 20
+numBitsOnDeath: 10
+
+explodeTypeOnDeath: normal
+
+
+[graphics]
+image_offsetY: -4
+image: railgun.png
+image_wreak: NONE
+image_shadow: AUTO
+imageScale: 1.2
+turretImageScale: 0.5
+shadowOffsetX: 1
+shadowOffsetY: 1
+
+[attack]
+turretMultiTargeting: true
+turretRotateWithBody: true
+canAttack: true
+canAttackFlyingUnits: false
+canAttackLandUnits: true
+canAttackUnderwaterUnits: false
+maxAttackRange: 320
+showRangeUIGuide: true
+turretTurnSpeed: 0.75
+
+[turret_main]
+x: 0
+y: 10
+image: primary_cannons_.png
+barrelHeight: -2
+idleDir: 0
+canAttackUnderwaterUnits: false
+recoilOffset: -0.7
+recoilOutTime: 2
+recoilReturnTime: 2
+projectile: 1
+canAttack: false
+canAttackFlyingUnits:false
+shoot_sound:cannon_firing
+shoot_sound_vol:0.6
+shoot_flame: CUSTOM:smallMuzzle1
+onShoot_freezeBodyMovementFor: 2
+
+[turret_barrel1]
+x: -8
+y: 15
+size: 18
+slave: true
+attachedTo: main
+projectile: 1
+image: barrel_heavy.png
+warmup: 0.5s
+shoot_sound:cannon_firing
+shoot_sound_vol:0.3
+shoot_flame:CUSTOM:hugeMuzzle
+shoot_light:#FFEECCCC
+canShoot: true
+recoilOffset: -1.4
+recoilOutTime: 4
+recoilReturnTime: 30
+
+[turret_barrel2]
+copyFrom: barrel1
+x: 0
+y: 16
+linkDelayWithTurret: barrel1
+warmup: 0.5s
+
+[turret_barrel3]
+copyFrom: barrel2
+x: 8
+y: 15
+linkDelayWithTurret: barrel1
+warmup: 1s
+
+[turret_barrel4]
+copyFrom: barrel3
+x: -3
+y:  21
+image: barrel2.png
+linkDelayWithTurret: barrel1
+size: 16
+warmup: 1.5s
+
+[turret_barrel5]
+copyFrom: barrel4
+x: 3
+y: 21
+linkDelayWithTurret: barrel1
+image: barrel2.png
+size: 16
+warmup: 2s
+
+[effect_battleshipMuzzle]
+life: 100
+xOffsetRelative:2
+yOffsetRelative:2
+image: ROOT:Common/MuzzleFlashBS1.png
+attachedToUnit: true
+scaleFrom: 1.1
+
+[projectile_1]
+explodeOnEndOfLife: true
+life: 90
+speed: 9
+targetSpeed: 10
+turnSpeed: 0.75
+drawSize: 0.75
+directDamage: 60
+areaDamage: 240
+areaRadius: 40
+targetGround: true
+targetGroundSpread: 8
+targetGround_includeTargetHeight: true
+#initialUnguidedSpeedHeight: 1.2
+#gravity:0.9
+image: ROOT:Common/TankShellOSAC.png
+largeHitEffect: true
+explodeEffect: CUSTOM:smokeGround*3, large*2, shockwave, smoke*2
+#moveWithParent: true
+
+[movement]
+movementType: AIR
+slowDeathFall: true
+moveSpeed: 0.7
+moveAccelerationSpeed: 0.6
+moveDecelerationSpeed: 0.5
+reverseSpeedPercentage: 0.4
+maxTurnSpeed: 4
+turnAcceleration: 0.015
+fallingAccelerationDead: 0.005

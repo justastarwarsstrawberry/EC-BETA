@@ -1,0 +1,29 @@
+[projectile_1]
+
+mutator1_ifUnitWithTags: infantry
+mutator1_directDamageMultiplier: 2
+
+mutator2_ifUnitWithTags: drone
+mutator2_directDamageMultiplier: 0.2
+
+mutator3_ifUnitWithTags: Armor
+mutator3_directDamageMultiplier: 0.1
+
+mutator4_ifUnitWithTags: lArmor
+mutator4_directDamageMultiplier: 0.5
+
+mutator5_ifUnitWithTags: SpecInfArmor
+mutator5_directDamageMultiplier: 0.75
+
+mutator6_ifUnitWithTags: InfArmor
+mutator6_directDamageMultiplier: 0.75
+
+mutator7_ifUnitWithTags: ImpInfArmor
+mutator7_directDamageMultiplier: 0.5
+
+mutator8_ifUnitWithTags: building
+mutator8_directDamageMultiplier: 0.5
+
+
+mutator9_ifUnitWithTags: experimental
+mutator9_directDamageMultiplier: 0.7

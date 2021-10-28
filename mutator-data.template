@@ -1,0 +1,80 @@
+
+#Data by Hyasabaru
+
+
+#infantry
+#drone
+#Armor
+#lArmor
+#aircraft
+#jetpacks
+
+
+[template_laserData]
+mutator1_ifUnitWithTags: infantry
+mutator1_directDamageMultiplier: 2
+mutator2_ifUnitWithTags: drone
+mutator2_directDamageMultiplier: 0.2
+mutator3_ifUnitWithTags: Armor
+mutator3_directDamageMultiplier: 0.1
+mutator4_ifUnitWithTags: lArmor
+mutator4_directDamageMultiplier: 0.5
+
+[template_massacre]
+#For Chaos Infantry
+mutator1_changedExplodeEffect: CUSTOM:blood*4
+
+[template_basicTank]
+mutator1_ifUnitWithTags: infantry
+mutator1_directDamageMultiplier: 1.5
+mutator2_ifUnitWithTags: Armor
+mutator2_directDamageMultiplier: 0.8
+
+[template_rocketData]
+mutator1_ifUnitWithTags: infantry
+mutator1_directDamageMultiplier: 0.10
+mutator2_ifUnitWithTags: AntiRArmor
+mutator2_directDamageMultiplier: 0.5
+mutator3_ifUnitWithTags: lArmor
+mutator3_directDamageMultiplier: 1.75
+mutator4_ifUnitWithTags: Armor
+mutator4_directDamageMultiplier: 0.75
+mutator5_ifUnitWithTags: aircraft
+mutator5_directDamageMultiplier: 2
+mutator6_ifUnitWithTags: jetpacks
+mutator6_directDamageMultiplier: 10
+autoTargetingOnDeadTarget: true
+
+[template_droneEcho]
+mutator1_ifUnitWithTags: Armor
+mutator1_directDamageMultiplier: 0.5
+mutator2_ifUnitWithTags: lArmor
+mutator2_directDamageMultiplier: 0.9
+mutator3_ifUnitWithTags: infantry
+mutator3_directDamageMultiplier: 2
+
+[template_droneData]
+mutator1_ifUnitWithTags: infantry
+mutator1_directDamageMultiplier: 1.2
+mutator2_ifUnitWithTags: drone
+mutator2_directDamageMultiplier: 0.2
+mutator3_ifUnitWithTags: Armor
+mutator3_directDamageMultiplier: 0.1
+mutator4_ifUnitWithTags: lArmor
+mutator4_directDamageMultiplier: 0.7
+mutator5_ifUnitWithTags: aircraft
+mutator5_directDamageMultiplier: 1.5
+
+[template_scoutData]
+mutator1_ifUnitWithTags: infantry
+mutator1_directDamageMultiplier: 1.5
+mutator2_ifUnitWithTags: Armor
+mutator2_directDamageMultiplier: 0.7
+
+[template_alphaData]
+mutator1_ifUnitWithTags: infantry
+mutator1_directDamageMultiplier: 2
+mutator2_ifUnitWithTags: lArmor
+mutator2_directDamageMultiplier: 1.5
+mutator3_ifUnitWithTags: Armor
+mutator3_directDamageMultiplier: 1.3
