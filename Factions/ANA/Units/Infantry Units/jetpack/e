@@ -1,28 +1,42 @@
-
-[core]
-name: JCSoldier_chaos2
-effectOnDeath:CUSTOM:blood*7, CUSTOM:bloodshed*2, CUSTOM:gore*2
+core]
+name: JCSoldier_chaos
+copyFrom: ROOT:Effects.template
 displayText: Jetpack Laser Trooper
 displayDescription: - Infantry \n - Laser Rifle \n - Flies like a nutcase \n - Can fly over obstacles
-copyFrom: ROOT:Effects.template
+effectOnDeath:CUSTOM:blood*7, CUSTOM:bloodshed*2, CUSTOM:gore*2
+overrideAndReplace: heavyInterceptor
 class: CustomUnitMetadata
-price: 50
+price: 450
 maxHp: 200
 mass: 450
 energyMax: 20
-
-energyNeedsToRechargeToFull: false
+energyRegen: 0.06
+energyNeedsToRechargeToFull: true
 tags: infantry, aircraft, jetpack
-energyRegen: -0.09
+explodeOnDeath: false
+hideScorchMark: true
 techLevel: 2
-buildSpeed: 0.0010
+buildSpeed: 0.0013
 #availableInDemo: true
-isUnrepairableUnit: true
+
 radius: 5
 displayRadius: 5
-
+isUnrepairableUnit: true
 isBio: false
 softCollisionOnAll: 0
+
+
+[action_jetpack]
+text:  jetpack
+description: activate jetpack for short flight \n- cannot attack while in air 
+convertTo: JCSoldier_chaos2
+addActionCooldownTime: 25s
+
+
+
+
+
+
 
 [graphics]
 total_frames: 5
@@ -31,32 +45,24 @@ imageScale:0.6
 turretImageScale:0.9
 
 image:        JPtroop.png
-splastEffectReverse: true
-splastEffect: true
-
 
 image_shadow: AUTO
 shadowOffsetX:1
 shadowOffsetY:1
 
-showEnergyBar: true
-animation_moving_start: 1
-animation_moving_end: 2
-animation_moving_speed: 3
+showEnergyBar: false
+
 
 animation_attack_start: 3
 animation_attack_end: 4
-animation_attack_speed: 2
+animation_attack_speed: 1
 animation_attack_pingPong: true
 
-animation_idle_start:1
-animation_idle_end:2
-animation_idle_speed: 1
 
 [attack]
-canAttack: false
+canAttack: true
 canAttackFlyingUnits: false
-canAttackLandUnits:   false
+canAttackLandUnits:   true
 canAttackUnderwaterUnits: false
 
 turretSize: 20
@@ -69,17 +75,11 @@ shootDelay: 0.5s
 
 aimOffsetSpread: 1
 
-[action_trigger_Land]
-convertTo: JCSoldier_chaos
-autoTrigger: if self.energy(LessThan=1) and self.isOverPassableTile(Type='OVER_CLIFF')
-isVisible: false
-addActionCooldownTime: 5000
-resetCustomTimer: true
 [turret_1]
 #
 x: 0
 y: 0
-energyUsage: 2
+energyUsage: 5
 projectile: 1
 invisible: true
 turnSpeedAcceleration: 1.0
@@ -89,14 +89,14 @@ shoot_sound_vol:0.3
 shoot_flame: NONE
 shoot_light: #51adb0
 
-canShoot: false
+canShoot: true
 
 recoilOffset: -1.4
 recoilOutTime: 3.6
 recoilReturnTime: 7
 
 [projectile_1]
-directDamage: 45
+directDamage: 15
 life: 30
 speed: 6
 image: ROOT:Common/TracerOSAC1.png
@@ -130,16 +130,12 @@ scaleTo: 0.3
 attachedToUnit:false
 
 [movement]
-movementType: AIR
-moveSpeed: 1.2
+movementType: LAND
+moveSpeed: 0.7
 moveAccelerationSpeed: 0.14
 moveDecelerationSpeed: 0.17
-
 maxTurnSpeed: 4.1
 turnAcceleration: 0.50
 
 moveSlidingMode :false
 moveIgnoringBody:false
-
-targetHeight: 10
-targetHeightDrift: 2
