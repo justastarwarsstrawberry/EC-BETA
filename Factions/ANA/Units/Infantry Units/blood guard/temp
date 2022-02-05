@@ -1,0 +1,67 @@
+[core]
+copyFrom: BG-lvl2.ini
+name: Blood_guard_lvl3
+
+showInEditor: true
+maxHp: 1195
+armour: 6
+
+selfRegenRate: 0.066
+energyRegen: 0.037
+
+[attachment_ICON]
+@copyFrom_skipThisSection: true
+
+[attachment_ICON2]
+x: 0
+y: 0
+idleDir: -0
+onCreateSpawnUnitOf: icon2
+isUnselectable: true
+canBeAttackedAndDamaged: true
+resetRotationWhenNotAttacking: false
+isVisible: true
+lockRotation: true
+lockLegMovement: true
+setDrawLayerOnTop: true
+rotateWithParent: false
+
+
+[hiddenAction_remove]
+attachments_onlyOnSlots: ICON2
+[projectile_1]
+areaDamage: 35
+areaRadius: 44
+mutator1_areaDamageMultiplier: 5.5
+
+[action_switch]
+text: Switch Weapons
+convertTo: Armor_BG3
+description: Switch weapons to Anti-armour
+onlyOneUnitAtATime: true
+allowMultipleInQueue: false
+buildSpeed: 2s
+
+[graphics]
+image: Blood_guard3.png
+
+[attack]
+maxAttackRange: 210
+
+[projectile_2]
+areaDamage: 77
+areaRadius: 38
+
+mutator1_areaDamageMultiplier: 5.5
+[hiddenAction_levelUp]
+@copyFrom_skipThisSection: true
+[movement]
+movementType: LAND
+moveSpeed: 0.56
+moveAccelerationSpeed: 0.35
+moveDecelerationSpeed: 0.35
+maxTurnSpeed: 4.1
+turnAcceleration: 0.50
+
+
+
