@@ -1,0 +1,67 @@
+##This is for mostly large projectiles, tanks and such##
+
+
+
+##-----------------For tonks------------##
+
+#Use this for bigger and heavier tanks, you can use them on small tanks but resize them accordingly
+[effect_projectileGroundSplash]
+
+alsoPlaySound: ROOT:Common sounds/boom.ogg
+
+priority:high
+
+image: sub_bubbles.png
+createWhenOverLiquid: false
+life: 240
+fadeOut: true
+attachedToUnit: false
+color: #463126
+fadeInTime:5
+scaleFrom: 6
+scaleTo: 9
+alpha: 1.25
+drawUnderUnits:false
+hSpeed: 1.75
+hOffsetRandom: 0.75
+
+dirOffsetRandom:180
+
+physics: true
+physicsGravity: 0.1
+xOffsetRelativeRandom: 24
+yOffsetRelativeRandom: 24
+xSpeedAbsoluteRandom:1.1
+ySpeedAbsoluteRandom:1.1
+atmospheric: true
+
+[effect_projectileGroundSmoke]
+priority:veryhigh
+
+stripIndex: effects
+frameIndex: 0
+
+createWhenOverLiquid: false
+life: 360
+fadeOut: true
+attachedToUnit: false
+color: #6D5448
+fadeInTime:5
+scaleFrom: 9
+scaleTo: 10
+alpha: 1.25
+drawUnderUnits:false
+hSpeed:0.2
+hOffsetRandom:0.15
+
+
+dirOffsetRandom:180
+
+shadow:true
+xOffsetRelativeRandom: 96
+yOffsetRelativeRandom: 96
+xSpeedAbsoluteRandom:0.5
+ySpeedAbsoluteRandom:0.5
+atmospheric: true
+
+##------------------End of tonks------------------##
