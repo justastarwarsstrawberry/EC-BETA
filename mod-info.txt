@@ -1,5 +1,5 @@
 [mod]
-title: Eternal Conflict v0.4C
+title: Eternal Conflict v0.5b
 description: "In the light of the burning corpses, we struggle against a mighty foe who stands in the peace of people and the future of our children. we may not have much left but we will fight for the future of this sinful word. take the lead commander! show the path of freedom and prosperity. the world is in your hands, goodluck." Official version of EC, Produced by the pancake studios/pancake team 7.
 
 tags: units, maps
