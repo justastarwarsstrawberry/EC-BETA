@@ -1,0 +1,109 @@
+[core]
+
+name: light
+displayText: lightTank
+displayDescription: a tank but more better for seeking enemies, spoting targets and infantry support
+class: CustomUnitMetadata
+price: 3500
+maxHp: 1000
+mass: 25000
+
+energyMax: 20
+energyRegen: 0.07
+energyNeedsToRechargeToFull: true
+
+techLevel: 1
+buildSpeed: 18s
+radius: 25
+displayRadius: 21
+tags: tank
+isBio: false
+softCollisionOnAll: 5
+[graphics]
+total_frames: 1
+
+image:        hull.png
+image_wreak:  NONE
+image_turret: turret.png
+
+
+imageScale: 0.5
+turretImageScale: 0.5
+
+image_shadow: AUTO
+shadowOffsetX:1
+shadowOffsetY:1
+
+dustEffect: true
+
+[attack]
+canAttack: true
+canAttackFlyingUnits: true
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+
+turretSize: 5
+turretTurnSpeed: 1
+
+
+maxAttackRange: 620
+shootDelay: 20
+
+[turret_1]
+#barrel
+x: 2
+y: 10
+
+slave: true
+projectile: 1
+attachedTo: 2
+turnSpeed: 1
+turnSpeedAcceleration: .2
+shoot_sound:large_gun_fire2
+shoot_sound_vol:0.3
+shoot_flame:small
+shoot_light:#FFEECCCC
+canShoot: true
+energyUsage: 5
+recoilOffset: -10
+recoilReturnTime: 10
+image: barrel.png
+warmup: 10
+
+[turret_2]
+#main_turret
+x: 0
+y: 0
+
+turnSpeedAcceleration: .05
+turnSpeed: 1
+
+canShoot: false
+
+image: turret.png
+
+
+[projectile_1]
+areaDamage: 40
+areaRadius: 100
+life: 60
+speed: 20
+
+frame: 1
+
+drawSize: 1
+
+image: bullet.png
+
+
+[movement]
+movementType: LAND
+moveSpeed: 1.5
+moveAccelerationSpeed: 0.03
+moveDecelerationSpeed: 0.009
+
+maxTurnSpeed: 1.5
+turnAcceleration: 0.5
+
+moveSlidingMode :false
+moveIgnoringBody:false

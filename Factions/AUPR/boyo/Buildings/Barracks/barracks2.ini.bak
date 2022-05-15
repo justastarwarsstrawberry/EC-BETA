@@ -1,0 +1,79 @@
+
+[core]
+name: barracks2
+displayText: infantry barracks
+displayDescription: -Trains all infantry units
+class: CustomUnitMetadata
+price: 10000
+maxHp: 1000
+mass: 9000
+
+#footprint used for collisions with units (left, up, right, down)
+footprint: -1,-1,1,1
+constructionFootprint: -1,-1,1,2
+
+techLevel: 1
+buildSpeed: 60s
+radius: 70
+isBio: false
+isBuilding: true
+exit_x:15
+exit_y:15
+exit_moveAwayAmount: 40
+fogOfWarSightRange: 15
+nanoFactorySpeed: 1.5
+
+[canBuild_Rally]
+name: inf2
+[canBuild_inf1]
+name: Sni
+[canBuild_inf2]
+name: mg
+[canBuild_arti1]
+name: hw
+[canBuild_inf3]
+name: Engineer
+[canBuild_inf4]
+name: cqi
+[canBuild_arti2]
+ name: roket
+ [canBuild_inf5]
+ name: Mk1
+ [canBuild_inf6]
+ name: Mk2
+ [canBuild_inf7]
+ name: Mk3
+ 
+[graphics]
+total_frames: 5
+image_offsetY: -20
+image:        br2.png
+image_wreak:  NONE
+animation_idle_start: 0
+animation_idle_end: 4
+animation_idle_speed: 10
+shadowOffsetX: 0
+shadowOffsetY: 50
+image_shadow: NONE
+imageScale:0.7
+turretImageScale:0.7
+[attack]
+canAttack: false
+canAttackFlyingUnits: false
+canAttackLandUnits:   false
+canAttackUnderwaterUnits: false
+[movement]
+movementType: NONE
+moveSpeed: 0
+moveAccelerationSpeed: 0.01
+moveDecelerationSpeed: 0.01
+
+maxTurnSpeed: 0
+turnAcceleration: 0.1
+[ai]
+buildPriority: 0.8
+noneInBaseExtraPriority: 0.1
+noneGlobalExtraPriority: 0.34
+maxEachBase: 15
+recommendedInEachBaseNum: 3
+maxGlobal: 15

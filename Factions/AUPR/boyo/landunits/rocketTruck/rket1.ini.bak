@@ -1,0 +1,112 @@
+
+[core]
+name: roket
+displayText: Rocketi
+displayDescription: -Artillery rocket truck
+class: CustomUnitMetadata
+price: 7500
+maxHp: 670
+mass: 20000
+
+techLevel: 2
+buildSpeed: 0.0005
+#availableInDemo: true
+
+radius: 25
+displayRadius: 26
+
+isBio: false
+softCollisionOnAll: 0
+
+fogOfWarSightRange:28
+
+energyMax: 16
+energyRegen: 0.01
+energyNeedsToRechargeToFull: true
+
+[graphics]
+total_frames: 1
+
+imageScale:0.5
+turretImageScale:0.5
+
+image:        rket.png
+image_wreak:  NONE
+image_turret: turret.png
+
+image_shadow: AUTO
+shadowOffsetX:1
+shadowOffsetY:1
+
+dustEffect: true
+
+lock_body_rotation_with_main_turret: false
+
+[attack]
+canAttack: true
+canAttackFlyingUnits: false
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+
+isFixedFiring: false
+
+turretSize: 1
+turretTurnSpeed: 0.1
+aimOffsetSpread: 4
+maxAttackRange: 750
+shootDelay: 5
+#24
+
+[turret_1]
+#
+x: 0
+y: -10
+
+projectile: 1
+turnSpeedAcceleration: 0.1
+turnSpeed: 3.5
+energyUsage: 0.5
+
+#shoot_flame:shockwave
+shoot_sound:missile_fire
+shoot_sound_vol:0.2
+canShoot: true
+shoot_light:#FFEECCCC
+
+recoilOffset: -1
+recoilOutTime: 2
+recoilReturnTime: 3
+
+[projectile_1]
+areaDamage: 80
+areaRadius: 100
+largeHitEffect: true
+trailEffect: true
+frame: 4
+life: 1000
+speed: 25
+
+#targetGround: true
+#targetGroundSpread: 25
+
+areaDamage: 180
+areaRadius: 55
+
+autoTargetingOnDeadTarget: true
+
+
+wobbleAmplitude: 0.4
+wobbleFrequency: 0.8s
+
+#turnSpeed:2
+[movement]
+movementType: LAND
+moveSpeed: 0.8
+moveAccelerationSpeed: 0.01
+moveDecelerationSpeed: 0.04
+
+maxTurnSpeed: 1.5
+turnAcceleration: 0.25
+
+moveSlidingMode :false
+moveIgnoringBody:false

@@ -1,0 +1,134 @@
+[core]
+
+name: hw
+displayText: howitzer
+displayDescription: a large manned support weapon for taking out fortified postions and large group/enemies
+class: CustomUnitMetadata
+price: 750
+maxHp: 250
+mass:5000
+
+techLevel: 1
+buildSpeed: 15s
+
+radius: 12
+displayRadius: 13
+
+isBio: false
+softCollisionOnAll: 0
+armour: 1
+[graphics]
+total_frames: 1
+
+image:        hull.png
+image_wreak:  NONE
+image_turret: barrel.png
+
+imageScale: 0.5
+turretImageScale: 0.4
+image_shadow: AUTO
+shadowOffsetX:1
+shadowOffsetY:1
+
+lock_body_rotation_with_main_turret: true
+dustEffect: true
+dustEffect: true
+
+[attack]
+canAttack: true
+canAttackFlyingUnits: false
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+
+turretSize: 5
+turretTurnSpeed: .5
+aimOffsetSpread: 3
+
+maxAttackRange: 750
+shootDelay: 5s
+#isFixedFiring: true
+[turret_1]
+#main turret
+x: 0
+y: 0
+invisible: true
+turnSpeed: 1
+turnSpeedAcceleration: 0.2
+canShoot: false
+
+[turret_2]
+#barrel
+x: 0
+y: 10
+
+slave: true
+projectile: 1
+attachedTo: 1
+turnSpeed: 1
+turnSpeedAcceleration: .2
+shoot_sound: ROOT:/Assets/gunSoundTankHuge.ogg
+shoot_flame:small
+shoot_light:#FFEECCCC
+canShoot: true
+recoilOffset: -6
+recoilReturnTime: 110
+recoilOutTime: 6
+image: barrel.png
+
+warmup: 1s
+
+
+[projectile_1]
+areaDamage: 200
+areaRadius: 200
+largeHitEffect: true
+life: 420
+speed: 100
+lightCastOnGround: true
+frame: 1
+initialUnguidedSpeedHeight: 1
+gravity:0.18
+trailEffect: true
+drawSize: 1
+trailEffect: CUSTOM:1
+
+[movement]
+reverseSpeedPercentage: 0.3
+movementType: LAND
+moveSpeed: 0.7
+moveAccelerationSpeed: 0.02
+moveDecelerationSpeed: 0.01
+
+maxTurnSpeed: .9
+turnAcceleration: .4
+
+moveSlidingMode :false
+moveIgnoringBody:false
+
+[effect_puff]
+stripIndex: effects
+frameIndex: 0
+createWhenOverLiquid: true
+liveAfterAttachedDies: true
+life: 100
+fadeOut: true
+attachedToUnit: false
+color: #2d292d
+fadeInTime: 50
+scaleFrom: 0.2
+scaleTo: 10
+alpha: 0.7
+drawUnderUnits:false
+hOffsetRandom:0.9
+dirSpeedRandom: 5
+dirOffsetRandom:50
+hSpeed: -0.08
+shadow:true
+xOffsetRelativeRandom: 0.2
+yOffsetRelativeRandom: 0.2
+[effect_1]
+life: 15
+image: bullet.png
+scaleFrom: 0.6
+scaleTo: 0.6
+attachedToUnit:false

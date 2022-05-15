@@ -1,0 +1,117 @@
+
+[core]
+name: turretMinigun
+displayText: Minigun
+displayDescription: will shred you, if you are not a tank
+class: CustomUnitMetadata
+price: 13000
+maxHp: 1000
+mass: 9000
+
+#footprint used for collisions with units (left, up, right, down)
+footprint: -1,-1,0,0
+constructionFootprint: -1,-1,0,0
+buildingToFootprintOffsetY: 0
+buildingToFootprintOffsetX: 0
+techLevel: 1
+buildSpeed: 36s
+radius: 40
+isBuilding: true
+isBio: false
+tags: building
+
+#energyMax: 300
+#energyRegen: 0.3
+#energyNeedsToRechargeToFull: true
+
+builtFrom_1_name: Engineer2
+builtFrom_1_pos:  6
+#builtFrom_1_techLevel: 1
+armour: 2
+[graphics]
+total_frames: 1
+image:        base.png
+image_wreak:  NONE
+image_turret: turret.png
+image_shadow: NONE
+turretImageScale: 0.6
+imageScale: 0.6
+shadowOffsetX:1
+shadowOffsetY:1
+teamColorsOnTurret: true
+[attack]
+canAttack: true
+canAttackFlyingUnits: true
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+turretTurnSpeed: 2
+maxAttackRange: 650
+shootDelay: 0.05s
+aimOffsetSpread: 5
+
+[turret_barrel]
+x: 0
+y: 19
+barrelY: 25
+attachedTo: main
+slave: true
+image: barrel.png
+
+turnSpeed: 0
+
+shoot_sound: ROOT:/Assets/gunSoundTankMedium.ogg
+shoot_sound_vol: 0.5
+shoot_flame:  large
+shoot_light:#FFEEEEEE
+
+canShoot: true
+
+recoilOffset: -1
+recoilReturnTime: 2
+warmup: 0.000000001s
+turnSpeed: 0.00001
+
+[turret_main]
+x: 0
+y: 0
+turnSpeedAcceleration: 0.2
+turnSpeed: 2
+canShoot: false
+shouldResetTurret: false
+
+[projectile_death]
+areaDamage: 20
+areaRadius: 90
+life: 200
+speed: 25
+targetSpeed: 7
+targetSpeedAcceleration: 0.08
+image: bullet.png
+frame: 5
+drawSize: 1
+mutatorInfantry_ifUnitWithTags: infantry
+mutatorInfantry_areaDamageMultiplier: 2
+
+[movement]
+movementType: LAND
+moveSpeed: 1.975
+moveAccelerationSpeed: 0.01
+moveDecelerationSpeed: 0.03
+
+maxTurnSpeed: 1
+turnAcceleration: 0.3
+
+moveSlidingMode: false
+moveIgnoringBody:false
+
+[effect_eject]
+attachedToUnit: false
+life: 100
+xOffsetRelative: 1
+yOffsetRelative: -5
+physics: true
+xSpeedRelative: 0.8
+ySpeedRelative: 0
+hSpeed: 1
+image: ROOT:/Assets/eject.png
+delayedStartTimer: 0

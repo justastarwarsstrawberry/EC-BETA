@@ -1,0 +1,124 @@
+
+[core]
+
+name: mg
+displayDescription: support soldiers that can hold a position
+class: CustomUnitMetadata
+price: 290
+maxHp: 75
+mass: 50
+transportSlotsNeeded: 1
+techLevel: 1
+buildSpeed: 12s
+radius: 5
+displayRadius: 6
+energyMax: 60
+energyRegen: 0.2
+energyNeedsToRechargeToFull: true
+tags: infantry
+
+isBio: true
+
+action_1_convertTo: Dugout
+action_1_text: Mg duggout
+action_1_description: -dug in machinegun for defence
+action_1_buildSpeed: 20s
+action_1_price: 0
+action_1_whenBuilding_cannotMove: true
+action_1_pos:  1
+[graphics]
+total_frames: 4
+
+image:        MG.png
+image_wreak:  NONE
+image_turret: NONE
+
+image_shadow: AUTO
+shadowOffsetX:3
+shadowOffsetY:3
+
+imageScale: 0.5
+animation_moving_start: 0
+animation_moving_end: 2
+animation_moving_speed: 1
+
+
+dustEffect: true
+
+lock_body_rotation_with_main_turret: true
+
+
+[attack]
+canAttack: true
+canAttackFlyingUnits: false
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+
+turretSize: 20
+turretTurnSpeed: 10
+shootDelay: 3
+isFixedFiring: true
+aimOffsetSpread: 3
+maxAttackRange: 550
+
+
+[turret_1]
+#
+x: 0
+y: -10
+
+projectile: 1
+
+turnSpeedAcceleration: 1.0
+
+shoot_sound: ROOT:/Assets/tenkmedium.ogg
+shoot_sound_vol: 0.5
+shoot_flame: small,CUSTOM:eject
+shoot_light:#BBF2D2FF
+canShoot: true
+warmupNoReset: true
+warmupCallDownRate: 1
+energyUsage: 4
+recoilOffset: -1
+recoilReturnTime: 35
+recoilOutTime: 7
+
+
+[projectile_1]
+directDamage: 0
+areaDamage: 3
+areaRadius: 20
+areaDamageNoFalloff: true
+life: 150
+speed: 25
+
+frame: 2
+
+drawSize: 0.9
+image: projectile.png
+lightColor: #ffe92b
+lightSize: 0.4
+
+
+[movement]
+movementType: LAND
+moveSpeed: 1
+moveAccelerationSpeed: 0.5
+moveDecelerationSpeed: 0.7
+
+maxTurnSpeed: 5
+turnAcceleration: 1
+
+[effect_eject]
+attachedToUnit: false
+life: 100
+xOffsetRelative: 1
+yOffsetRelative: -5
+physics: true
+xSpeedRelative: 0.8
+ySpeedRelative: 0
+hSpeed: 1
+image: ROOT:/Assets/eject.png
+delayedStartTimer: 0
+
+

@@ -1,0 +1,48 @@
+
+[core]
+name: stopper
+displayText: tankStoper
+displayDescription: -bambozles tanks
+class: CustomUnitMetadata
+price: 50
+maxHp: 500
+mass: 8900
+#footprint used for collisions with units (left, up, right, down)
+footprint: -1,-1,-1,-1
+constructionFootprint: -1,-1,-1,-1
+buildingToFootprintOffsetY: 0
+buildingToFootprintOffsetX: 0
+tags: tankstoper
+techLevel: 1
+buildSpeed: 10s
+radius: 35
+isBio: false
+isBuilding: true
+armour: 2
+[graphics]
+total_frames: 1
+image:        stop.png
+image_wreak:  NONE
+image_shadow: NONE
+shadowOffsetX:1
+shadowOffsetY:1
+imageScale: .5
+image_offsetX: -8
+image_offsetY: -10
+[attack]
+canAttack: false
+canAttackFlyingUnits: false
+canAttackLandUnits:   false
+canAttackUnderwaterUnits: false
+
+[movement]
+movementType: LAND
+moveSpeed: 1.975
+moveAccelerationSpeed: 0.01
+moveDecelerationSpeed: 0.03
+
+maxTurnSpeed: 1
+turnAcceleration: 0.3
+
+moveSlidingMode: false
+moveIgnoringBody:false

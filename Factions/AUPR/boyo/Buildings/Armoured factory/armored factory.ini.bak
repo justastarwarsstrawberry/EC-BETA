@@ -1,0 +1,77 @@
+
+[core]
+name: ArmouredFactory
+displayText: Armoured Factory
+displayDescription: -Creates armored vehicles
+class: CustomUnitMetadata
+price: 1400
+maxHp: 700
+mass: 9000
+
+#footprint used for collisions with units (left, up, right, down)
+footprint: -1,-1,1,1
+constructionFootprint: -1,-1,1,2
+
+techLevel: 1
+buildSpeed: 60s
+radius: 35
+isBio: false
+isBuilding: true
+exit_x:0
+exit_y:-1
+exit_moveAwayAmount: 40
+fogOfWarSightRange: 15
+nanoFactorySpeed: 1.5
+
+action_1_convertTo:  ArmouredFactoryT2
+action_1_price:  25000
+action_1_text: Upgrade Tech 2.
+action_1_displayType: upgrade
+action_1_buildSpeed: 0.0007
+action_1_pos: 0.2
+
+[canBuild_AF]
+name: tank2
+[canBuild_AF2]
+name: aa
+[canBuild_AF3]
+name: light
+[canBuild_AF4]
+name: lightH
+[canBuild_AF5]
+name: ADC
+[canBuild_AF6]
+name: tank5
+
+[graphics]
+total_frames: 2
+image_offsetY: -13
+image:        AF.png
+image_wreak:  NONE
+image_back: back.png
+animation_idle_start: 0
+animation_idle_end: 1
+animation_idle_speed: 10
+shadowOffsetX: 0
+shadowOffsetY: 50
+imageScale:0.7
+turretImageScale:0.7
+[attack]
+canAttack: false
+canAttackFlyingUnits: false
+canAttackLandUnits:   false
+canAttackUnderwaterUnits: false
+[movement]
+movementType: NONE
+moveSpeed: 0
+moveAccelerationSpeed: 0.01
+moveDecelerationSpeed: 0.01
+
+maxTurnSpeed: 0
+turnAcceleration: 0.1
+[ai]
+buildPriority: 0.43
+noneInBaseExtraPriority: 0.3
+maxEachBase: 15
+recommendedInEachBaseNum: 2
+maxGlobal: 7

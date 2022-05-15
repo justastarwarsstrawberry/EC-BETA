@@ -1,0 +1,63 @@
+
+[core]
+name: airf
+displayText: airFactory
+displayDescription: -creates air vehicles for you
+class: CustomUnitMetadata
+price: 1500
+maxHp: 900
+mass: 9000
+
+#footprint used for collisions with units (left, up, right, down)
+footprint: -1,-1,1,1
+constructionFootprint: -1,-1,1,2
+
+techLevel: 1
+buildSpeed: 60s
+radius: 35
+isBio: false
+isBuilding: true
+exit_x:-15
+exit_y:-1
+exit_moveAwayAmount: 40
+fogOfWarSightRange: 15
+nanoFactorySpeed: 1.5
+
+[canBuild_Av]
+name: heli
+[canBuild_Av2]
+name: Gunship2
+[canBuild_Av3]
+name: BL
+[canBuild_Av4]
+name: heliAttack
+[graphics]
+total_frames: 5
+imageScale:0.5
+turretImageScale:0.7
+image:        air.png
+image_wreak:  NONE
+animation_idle_start: 0
+animation_idle_end: 4
+animation_idle_speed: 10
+shadowOffsetX: 0
+shadowOffsetY: 50
+[attack]
+canAttack: false
+canAttackFlyingUnits: false
+canAttackLandUnits:   false
+canAttackUnderwaterUnits: false
+[movement]
+movementType: NONE
+moveSpeed: 0
+moveAccelerationSpeed: 0.01
+moveDecelerationSpeed: 0.01
+
+maxTurnSpeed: 0
+turnAcceleration: 0.1
+[ai]
+buildPriority: 0.43
+noneInBaseExtraPriority: 0.3
+maxEachBase: 15
+recommendedInEachBaseNum: 2
+maxGlobal: 3

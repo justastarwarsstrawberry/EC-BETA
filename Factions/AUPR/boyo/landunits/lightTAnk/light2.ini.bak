@@ -1,0 +1,103 @@
+[core]
+
+name: lightH
+displayText: IST
+displayDescription: a light tank but more oriented towards close infantry support
+class: CustomUnitMetadata
+price: 4000
+maxHp: 1200
+mass: 25000
+
+techLevel: 1
+buildSpeed: 20s
+radius: 25
+displayRadius: 21
+tags: tank
+isBio: false
+softCollisionOnAll: 5
+[graphics]
+total_frames: 1
+
+image:        hull.png
+image_wreak:  NONE
+image_turret: turret2.png
+
+
+imageScale: 0.5
+turretImageScale: 0.5
+
+image_shadow: AUTO
+shadowOffsetX:1
+shadowOffsetY:1
+
+dustEffect: true
+teamColorsOnTurret: true
+[attack]
+canAttack: true
+canAttackFlyingUnits: false
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+
+turretSize: 5
+turretTurnSpeed: 1
+
+
+maxAttackRange: 600
+shootDelay: 20
+
+[turret_1]
+#barrel
+x: 0
+y: 15
+
+slave: true
+projectile: 1
+attachedTo: 2
+turnSpeed: 1
+turnSpeedAcceleration: .2
+shoot_sound:large_gun_fire2
+shoot_sound_vol:0.3
+shoot_flame:small
+shoot_light:#FFEECCCC
+canShoot: true
+recoilOffset: -5
+recoilReturnTime: 20
+image: barrel2.png
+warmup: 2s
+[turret_2]
+#main_turret
+x: 0
+y: 0
+
+turnSpeedAcceleration: .05
+turnSpeed: 1
+
+canShoot: false
+
+image: turret2.png
+
+
+[projectile_1]
+areaDamage: 200
+areaRadius: 100
+life: 60
+speed: 5
+largeHitEffect: true
+frame: 1
+
+drawSize: 1
+
+image: bullet.png
+
+
+[movement]
+movementType: LAND
+moveSpeed: 1.5
+moveAccelerationSpeed: 0.03
+moveDecelerationSpeed: 0.009
+
+maxTurnSpeed: 1.5
+turnAcceleration: 0.03
+
+moveSlidingMode :false
+moveIgnoringBody:false

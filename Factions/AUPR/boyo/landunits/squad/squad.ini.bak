@@ -1,0 +1,101 @@
+[core]
+
+name: squad
+displayText: squad
+displayDescription: squad
+class: CustomUnitMetadata
+price: 500
+maxHp: 9999
+mass: 33000
+
+techLevel: 1
+buildSpeed: 15s
+transportUnitsRequireTag: infantry
+transportUnitsKillOnDeath: false
+maxTransportingUnits: 10
+radius: 35
+displayRadius: 36
+
+isBio: false
+softCollisionOnAll: 0
+dieOnConstruct: true
+dieOnZeroEnergy: true
+[graphics]
+total_frames: 1
+
+image:        1.png
+image_wreak:  NONE
+image_turret: NONE
+
+
+imageScale:0.8
+turretImageScale:0.7
+
+image_shadow: AUTO
+shadowOffsetX:1
+shadowOffsetY:1
+
+
+animation_moving_start: 0
+animation_moving_end: 2
+animation_moving_speed: 1
+
+
+dustEffect: true
+
+[attack]
+canAttack: true
+canAttackFlyingUnits: false
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+
+turretSize: 5
+turretTurnSpeed: 1
+
+
+maxAttackRange: 400
+shootDelay: 40
+
+[action_created]
+autoTriggerOnEvent: created
+addUnitsIntoTransport: inf*5, mg*1, cqi*4
+isVisible: false
+
+[turret_1]
+#main_turret
+x: 0
+y: 0
+
+turnSpeedAcceleration: .05
+turnSpeed: 1
+
+canShoot: false
+
+image: NONE
+
+
+[projectile_1]
+directDamage: 50
+areaRadius: 100
+life: 60
+speed: 20
+
+frame: 1
+
+drawSize: 1
+
+
+[movement]
+movementType: LAND
+moveSpeed: 1.5
+moveAccelerationSpeed: 0.05
+moveDecelerationSpeed: 0.09
+
+maxTurnSpeed: 1.9
+turnAcceleration: 0.05
+
+moveSlidingMode :false
+moveIgnoringBody:false
+
+[ai]
+useAsTransport: true

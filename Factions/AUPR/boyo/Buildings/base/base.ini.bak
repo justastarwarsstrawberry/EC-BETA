@@ -1,0 +1,136 @@
+
+[core]
+name: Base
+displayText: Main Base
+displayDescription: -should be protected
+class: CustomUnitMetadata
+price: 25000
+maxHp: 3000
+mass: 9000
+
+#footprint used for collisions with units (left, up, right, down)
+footprint: -1,-1,1,1
+constructionFootprint: -1,-1,1,1
+
+techLevel: 2
+buildSpeed: 60s
+radius: 35
+isBio: false
+isBuilding: true
+exit_x:0
+exit_y:-1
+exit_moveAwayAmount: 40
+fogOfWarSightRange: 15
+nanoFactorySpeed: 1.5
+generation_credits: 4
+generation_delay: 60
+armour: 20
+
+[graphics]
+total_frames: 3
+imageScale:0.7
+turretImageScale:0.7
+image:        Base.png
+image_wreak:  NONE
+image_back: back.png
+animation_idle_start: 0
+animation_idle_end: 2
+animation_idle_speed: 10
+shadowOffsetX: 0
+shadowOffsetY: 50
+image_offsetY: -20
+
+[canBuild_B1]
+name: inf
+[canBuild_B2]
+name: Engineer
+
+
+[attack]
+canAttack: true
+canAttackFlyingUnits: true
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+
+turretSize: 27
+turretTurnSpeed: 5
+aimOffsetSpread: 3
+maxAttackRange: 700
+shootDelay: 3
+
+[turret_1]
+x: 22
+y: 14
+projectile: 1
+shoot_sound: ROOT:/Assets/tenkmedium.ogg
+shoot_sound_vol:0.5
+shoot_flame: small
+shoot_light:#BBF2D2FF
+size: 15
+energyUsage: 4
+shouldResetTurret: false
+image: TT.png
+warmup: 0.3s
+[turret_2]
+x: -22
+y: 14
+projectile: 1
+shoot_sound: ROOT:/Assets/tenkmedium.ogg
+shoot_sound_vol:0.5
+shoot_flame: small
+shoot_light:#BBF2D2FF
+size: 15
+energyUsage: 4
+shouldResetTurret: false
+image: TT.png
+warmup: 0.3s
+
+[projectile_1]
+speed: 25
+directDamage: 10
+life: 120
+image: S.png
+areaDamage: 5
+areaRadius: 35
+areaDamageNoFalloff: true
+
+[projectile_2]
+areaDamage: 5
+areaRadius: 50
+largeHitEffect: true
+life: 900
+speed: 1
+speedSpread: 0.1
+targetSpeed: 10
+trailEffect: true
+
+color: #FF1111
+trailEffect: true
+image: rocket.png
+drawSize: 0.9
+
+areaDamage: 300
+areaRadius: 75
+
+largeHitEffect: true
+targetGround: true
+targetGroundSpread: 100
+
+#lightColor: #ffe92b
+#lightSize: 1
+
+
+[movement]
+movementType: NONE
+moveSpeed: 0.1
+moveAccelerationSpeed: 0.01
+moveDecelerationSpeed: 0.01
+
+maxTurnSpeed: 0
+turnAcceleration: 0.1
+[ai]
+buildPriority: 0.43
+noneInBaseExtraPriority: 0.3
+maxEachBase: 15
+recommendedInEachBaseNum: 2
+maxGlobal: 10

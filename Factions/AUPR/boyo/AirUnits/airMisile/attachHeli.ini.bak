@@ -1,0 +1,222 @@
+
+[core]
+name: heliAttack
+displayText: Attack Helicopter
+displayDescription: -4 weapons \n-Mounted machine-gun
+class: CustomUnitMetadata
+price: 6000
+maxHp: 1000
+mass: 2000
+
+techLevel: 2
+buildSpeed: 30s
+
+#availableInDemo: false
+
+radius: 45
+displayRadius: 45
+isBio: false
+#softCollisionOnAll: 3
+softCollisionOnAll: 50
+
+#energyMax: 4
+#energyRegen: 0.0010
+
+
+
+[graphics]
+total_frames: 1
+
+image:        attackHeli (p).png
+image_wreak:  NONE
+image_turret: NONE
+#scaleImagesTo: 20
+#scaleTurretImagesTo: 9
+
+image_shadow: AUTO
+shadowOffsetX:1
+shadowOffsetY:1
+
+imageScale: 0.5
+teamColorsOnTurret: true
+#splastEffect: true
+movementEffect: CUSTOM:EkRotorwash, CUSTOM:EkRotordust
+movementEffectRate: 8
+lock_body_rotation_with_main_turret: false
+
+[attack]
+turretRotateWithBody: true
+
+canAttack: true
+canAttackFlyingUnits: true
+canAttackLandUnits:   true
+canAttackUnderwaterUnits: false
+
+turretSize: 10
+turretTurnSpeed: 4
+maxAttackRange: 580
+
+shootDelay: 0.005s
+isFixedFiring: true
+
+[turret_1]
+#machinegun
+x: 0
+y: 70
+barrelY: -15
+invisible: true
+projectile: 1
+
+turnSpeed: 50
+turnSpeedAcceleration: 1
+shouldResetTurret: true
+
+canShoot: true
+
+shoot_sound:gun_fire
+shoot_sound_vol:0.3
+shoot_flame: NONE
+shoot_light:#88FFBB00
+warmup: 0.05s
+
+[turret_3]
+#rocket
+x: -15
+y: 0
+size: 18
+
+invisible: true
+projectile: 2
+
+turnSpeedAcceleration: 1
+
+canShoot: true
+
+shoot_sound:gun_fire
+shoot_sound_vol:0.3
+shoot_flame: NONE
+shoot_light:#88FFBB00
+warmup: 0.3s
+
+[turret_4]
+#rocket
+x: 15
+y: 0
+size: 18
+
+invisible: true
+projectile: 2
+
+turnSpeedAcceleration: 1
+
+canShoot: true
+
+shoot_sound:gun_fire
+shoot_sound_vol:0.3
+shoot_flame: NONE
+shoot_light:#88FFBB00
+warmup: 0.3s
+
+[arm_1]
+#propeller
+x: 0
+y:10
+image_end: rotor.png
+image_end_teamColors: true
+drawOverBody: true
+spinRate:50
+
+
+
+[projectile_1]
+directDamage: 8
+life: 70
+speed: 12
+
+frame: 11
+color: #FFAA44
+drawSize: 0.85
+
+lightColor: #FFFF8866
+lightSize: 0.75
+
+[projectile_2]
+areaDamage: 5
+areaRadius: 50
+largeHitEffect: true
+life: 900
+speed: 1
+speedSpread: 0.1
+targetSpeed: 10
+trailEffect: true
+
+color: #FF1111
+trailEffect: true
+image: atr_rocket_new.png
+drawSize: 0.9
+
+areaDamage: 300
+areaRadius: 75
+
+largeHitEffect: true
+targetGround: true
+targetGroundSpread: 100
+
+#lightColor: #ffe92b
+#lightSize: 1
+
+
+[effect_EkRotorwash]
+image: rotorwash.png
+createWhenOverLand: false
+life: 40
+spawnChance: 1
+fadeOut: true
+attachedToUnit: false
+fadeInTime:2
+scaleFrom: 0.25
+scaleTo: 2
+alpha: 0.5
+drawUnderUnits:true
+hOffset: -40
+xOffsetRelative: -0
+yOffsetRelative: 0
+dirOffsetRandom: 180
+dirSpeedRandom: 0.6
+atmospheric: true
+
+[effect_EkRotordust]
+image: rotorwash.png
+createWhenOverLiquid: false
+life: 70
+spawnChance: 1
+fadeOut: true
+attachedToUnit: false
+fadeInTime: 6
+scaleFrom: 0.5
+scaleTo: 2.5
+alpha: 0.8
+color: #916C5B
+drawUnderUnits:true
+hOffset: -40
+dirOffsetRandom: 180
+dirSpeedRandom: 0.6
+atmospheric: true
+
+[movement]
+movementType: AIR
+moveSpeed: 5
+moveAccelerationSpeed: 0.004
+moveDecelerationSpeed: 0.03
+
+
+reverseSpeedPercentage:0
+
+maxTurnSpeed: 0.2
+turnAcceleration: 0.2
+
+moveSlidingMode :true
+moveIgnoringBody:true
+moveSlidingDir:  45
+
+slowDeathFall: true
